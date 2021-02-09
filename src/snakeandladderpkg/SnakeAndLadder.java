@@ -8,7 +8,7 @@ public class SnakeAndLadder {
 		System.out.println("*****Welcome to the Snake and Ladder Game.*****");
 		System.out.println(player1+" at start position "+playerPosition);
 		
-		while (playerPosition >= 0 && playerPosition < 10) {
+		while (playerPosition >= 0 && playerPosition < 100) {
 			dice = (int) Math.floor(Math.random() * 10) % 6 + 1;
 			System.out.println("\ndice "+dice);
 		
@@ -18,12 +18,18 @@ public class SnakeAndLadder {
 			case 1:
 				System.out.println("\nYeah! You got a Ladder. ");
 				playerPosition += dice;
+				if(playerPosition > 100) {
+					playerPosition -= dice;					
+				}
 				System.out.println("Your position is : " +playerPosition);
 				break;
 				
 			case 2:
 				System.out.println("\nOh No! Snake bit you. ");
 				playerPosition -= dice;
+				if(playerPosition < 0) {
+					playerPosition = 0;
+				}
 				System.out.println("Your position is : " +playerPosition);
 				break;
 	
@@ -38,7 +44,7 @@ public class SnakeAndLadder {
 			System.out.println("\nYour Position is :"+playerPosition);
 		}
 		
-		if(playerPosition >= 10){
+		if(playerPosition == 100){
 			System.out.println("\nCongratulations!!! You Won!");
 		}
 		
