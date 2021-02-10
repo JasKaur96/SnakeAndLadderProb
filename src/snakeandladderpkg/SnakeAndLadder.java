@@ -81,6 +81,6 @@ public class SnakeAndLadder {
 				System.out.println("\nCongratulations Player2 Won!");
 				break;
 			}
-		}
+		} 
 	}
 }
