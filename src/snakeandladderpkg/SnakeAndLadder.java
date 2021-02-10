@@ -15,7 +15,7 @@ public class SnakeAndLadder {
 			case 1:
 				System.out.println("Yeah! You got a Ladder. ");
 				player1Position += dice;
-				if (player1Position > 10) {
+				if (player1Position > 100) {
 					player1Position -= dice;
 				}
 				System.out.println("Dice : " + dice);
@@ -46,7 +46,7 @@ public class SnakeAndLadder {
 			case 1:
 				System.out.println("Yeah! You got a Ladder. ");
 				player2Position += dice;
-				if (player2Position > 10) {
+				if (player2Position > 100) {
 					player2Position -= dice;
 				}
 				System.out.println("Dice : " + dice);
@@ -71,12 +71,12 @@ public class SnakeAndLadder {
 				player2Position = 0;
 				System.out.println("\nYour Position is :" + player2Position);
 			}
-			if (player1Position == 10) {
+			if (player1Position == 100) {
 				System.out.println("\nPlayer1=" + player1Position + "\t Player2=" + player2Position);
 				System.out.println("\nCongratulations Player1 Won!");
 				break;
 			}
-			if (player2Position == 10) {
+			if (player2Position == 100) {
 				System.out.println("\nPlayer1=" + player1Position + "\t Player2=" + player2Position);
 				System.out.println("\nCongratulations Player2 Won!");
 				break;
